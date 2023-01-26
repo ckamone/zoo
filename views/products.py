@@ -8,7 +8,7 @@ from flask import (
 )
 from werkzeug.exceptions import NotFound
 
-from views.forms.products import CreateProductForm
+from .forms.products import CreateProductForm
 
 products_app = Blueprint(
     "products_app",

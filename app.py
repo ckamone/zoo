@@ -17,7 +17,7 @@
 from flask import Flask
 from flask import render_template, request
 
-from views.products import products_app
+from .views.products import products_app
 
 app = Flask(__name__)
 app.register_blueprint(products_app, url_prefix="/products")
