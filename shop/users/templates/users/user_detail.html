@@ -1,0 +1,12 @@
+{% extends 'root.html' %}
+{% block title %}
+    Profile
+{% endblock %}
+{% block content %}
+    <h2>{{ object.username }}</h2>
+    <ul>
+        <li>{{ object.email }}</li>
+
+    </ul>
+    <a href="{% url 'main_page' %}"><button type="submit">Back</button></a>
+{% endblock %}
