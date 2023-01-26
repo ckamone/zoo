@@ -5,10 +5,13 @@
 создайте базовое приложение на Flask
 создайте index view /
 добавьте страницу /about/, добавьте туда текст
-создайте базовый шаблон (используйте https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
+создайте базовый шаблон
+(используйте https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
 в базовый шаблон подключите статику Bootstrap 5 и добавьте стили, примените их
-в базовый шаблон добавьте навигационную панель nav (https://getbootstrap.com/docs/5.0/components/navbar/)
-в навигационную панель добавьте ссылки на главную страницу / и на страницу /about/ при помощи url_for
+в базовый шаблон добавьте навигационную панель nav
+(https://getbootstrap.com/docs/5.0/components/navbar/)
+в навигационную панель добавьте ссылки на главную страницу /
+и на страницу /about/ при помощи url_for
 """
 
 from flask import Flask
@@ -26,16 +29,28 @@ app.config.update(
 
 @app.get("/",endpoint="homepage")
 def get_root():
+    """
+    info
+    :return:
+    """
     print(request.args)
     return render_template("index.html")
 
 @app.route("/hello/")
 def hello_world():
+    """
+    info
+    :return:
+    """
     return "<h1>Hello world!</h1>"
 
 
 @app.route("/about/",endpoint="about")
 def about():
+    """
+    info
+    :return:
+    """
     text="В 1908 году французский авиатор Огюст Фаньер, " \
          "совершая показательный полет над Парижем, " \
          "врезался в Эйфелеву башню и погиб. " \

@@ -1,3 +1,8 @@
+"""
+info
+:return:
+"""
+
 from . import app
 
 __all__ = [
