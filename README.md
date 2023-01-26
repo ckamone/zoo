@@ -1,22 +1,20 @@
-# The cake shop
-
-## info
-testing django
-
-## how to
-1. don't forget to add .env file with SECRET_KEY 
-2. pip install -r requirements.txt
-3. python manage.py runserver 0.0.0.0:8000
-4. docker compose up -d
-5. cd ./homework_09/shop$ celery -A shop worker -l INFO
-
-## main goal
-1. add rabbitmq and celery
-2. add reg, login, logout functionality
-3. set up user rights (ingredients cans see only staff, crud only staff)
-4. выполнить тестирование своего приложения:
-использовать setUp, tearDown;
-проверять контекст.
-
-
-
+### Домашнее задание "Веб-приложение на Flask"
+#### Задача:
+- скопируйте папку `homework_05` для этой домашки (Памятка: https://github.com/OtusTeam/BasePython/tree/homeworks-new)
+- используйте следующие пакеты:
+    - Flask
+- в модуле `app` создайте базовое приложение на Flask
+- создайте index view `/`
+- добавьте страницу `/about/`, добавьте туда текст
+- создайте базовый шаблон (используйте https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
+- в базовый шаблон подключите статику Bootstrap 5 (подключите стили), примените стили Bootstrap
+- в базовый шаблон добавьте навигационную панель `nav` (https://getbootstrap.com/docs/5.0/components/navbar/)
+- в навигационную панель добавьте ссылки на главную страницу `/` и на страницу `/about/` при помощи `url_for`
+- добавьте новые зависимости в файл `requirements.txt` в корне проекта 
+  (лучше вручную, но можно командой `pip freeze > requirements.txt`, тогда обязательно проверьте, что туда попало, и удалите лишнее)
+#### Критерии оценки:
+- создано Flask приложение в `app.py`
+- добавлены вьюшки `/` и `/about/`
+- подключены и применены стили Bootstrap
+- в базовый шаблон добавлена навигационная панель
+- автоматический тест `test_homework_05` проходит
